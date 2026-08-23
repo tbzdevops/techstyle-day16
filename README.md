@@ -37,27 +37,30 @@ Kopiert die Secrets aus dem AWS-Lab in die GitHub Secrets.
 
 ## Abnahmekriterien
 
-Tag 16 ist ein **Sammelcheck**: die automatische Pruefung verifiziert, dass
-die Artefakte der vorangegangenen Container- und Betriebs-Tage im Repository
-vorhanden sind.
+Diese Kriterien prueft die Pipeline bei jedem Push automatisch. **Die Haken
+setzt die Pipeline selbst:** ein erfuelltes Kriterium wird abgehakt, und
+sobald eine Aenderung es wieder bricht, verschwindet der Haken. Du musst hier
+nichts von Hand pflegen — beim naechsten Push wird die Liste ueberschrieben.
 
-- [ ] Monitoring-Konfiguration vorhanden (Tag 9-10) — Prometheus-Konfiguration
-      im Repo-Stamm oder unter `monitoring/`
-- [ ] Security-Workflow vorhanden (Tag 11) — `.github/workflows/security*.yml`
-- [ ] `Dockerfile` vorhanden (Tag 14)
-- [ ] Container-Pipeline vorhanden (Tag 15) —
-      `.github/workflows/container*.yml`, `build*.yml` oder `docker*.yml`
+<!-- c50:progress -->
+**Fortschritt: 0 / 10 automatisch geprueften Kriterien erfuellt.** Noch nicht geprueft.
+<!-- /c50:progress -->
 
-> ⚠️ **Hinweis:** Der heutige Projektauftrag (Deployment auf EC2/ECR) wird
-> von diesen automatischen Checks nicht abgedeckt und durch die Lehrperson
-> manuell abgenommen.
+- [ ] Aufgabe 1: Deployment-Workflow vorhanden (.github/workflows/)
+- [ ] Aufgabe 1: Workflow definiert mindestens einen Job (jobs:)
+- [ ] Aufgabe 1: Stage 1 — Container-Image wird gebaut
+- [ ] Aufgabe 1: Stage 1 — Image wird in die Registry gepusht (ECR)
+- [ ] Aufgabe 1: Stage 2 — AWS-Credentials als GitHub Secrets referenziert
+- [ ] Aufgabe 1: Stage 3 — Deployment auf die EC2-Instanz
+- [ ] Aufgabe 1: docker-compose.yml für das Deployment vorhanden
+- [ ] Aufgabe 2: Deployment-Dokumentation vorhanden (DEPLOYMENT.md)
+- [ ] Aufgabe 2: Pipeline-Architektur und Bedienung dokumentiert
+- [ ] Aufgabe 2: Dokumentation hat ausreichend Inhalt (mind. 100 Wörter)
 
-Manuell abgenommen wird:
+Zusaetzlich manuell abgenommen (nicht automatisch geprueft):
 
-- [ ] CI-Pipeline fuer automatisierten Container-Build eingerichtet
-- [ ] Docker-Image in AWS ECR gepusht
-- [ ] Automatisches Deployment konfiguriert
-- [ ] End-to-End Pipeline (Code → Build → Push → Deploy) getestet
+- End-to-End Pipeline (Code -> Build -> Push -> Deploy) getestet
+- Bedienungsanleitung fuer Entwickler und Team-Schulung
 
 ## Abnahmekriterien selber pruefen
 
@@ -80,7 +83,8 @@ Exit-Code 1.
 
 **In GitHub** — bei jedem Push:
 
-Der Workflow **🎓 Classroom Autograding** laeuft automatisch. Ergebnis im Tab
+Der Workflow **🎓 Classroom Autograding** laeuft automatisch und hakt die
+erfuellten Kriterien oben im README ab. Ergebnis im Tab
 **Actions** → letzter Run → Job *Abnahmekriterien pruefen*.
 
 ## Anwendung lokal starten
