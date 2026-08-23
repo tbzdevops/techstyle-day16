@@ -43,19 +43,19 @@ sobald eine Aenderung es wieder bricht, verschwindet der Haken. Du musst hier
 nichts von Hand pflegen — beim naechsten Push wird die Liste ueberschrieben.
 
 <!-- c50:progress -->
-**Fortschritt: 0 / 10 automatisch geprueften Kriterien erfuellt.** Stand: 2026-08-23 21:54 UTC.
+**Fortschritt: 0 / 10 Kriterien erfüllt** ⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜ — noch nicht geprueft.
 <!-- /c50:progress -->
 
-- [ ] Aufgabe 1: Deployment-Workflow vorhanden (.github/workflows/)
-- [ ] Aufgabe 1: Workflow definiert mindestens einen Job (jobs:)
-- [ ] Aufgabe 1: Stage 1 — Container-Image wird gebaut
-- [ ] Aufgabe 1: Stage 1 — Image wird in die Registry gepusht (ECR)
-- [ ] Aufgabe 1: Stage 2 — AWS-Credentials als GitHub Secrets referenziert
-- [ ] Aufgabe 1: Stage 3 — Deployment auf die EC2-Instanz
-- [ ] Aufgabe 1: docker-compose.yml für das Deployment vorhanden
-- [ ] Aufgabe 2: Deployment-Dokumentation vorhanden (DEPLOYMENT.md)
-- [ ] Aufgabe 2: Pipeline-Architektur und Bedienung dokumentiert
-- [ ] Aufgabe 2: Dokumentation hat ausreichend Inhalt (mind. 100 Wörter)
+- [ ] ⬜ Aufgabe 1: Deployment-Workflow vorhanden (.github/workflows/)
+- [ ] ⬜ Aufgabe 1: Workflow definiert mindestens einen Job (jobs:)
+- [ ] ⬜ Aufgabe 1: Stage 1 — Container-Image wird gebaut
+- [ ] ⬜ Aufgabe 1: Stage 1 — Image wird in die Registry gepusht (ECR)
+- [ ] ⬜ Aufgabe 1: Stage 2 — AWS-Credentials als GitHub Secrets referenziert
+- [ ] ⬜ Aufgabe 1: Stage 3 — Deployment auf die EC2-Instanz
+- [ ] ⬜ Aufgabe 1: docker-compose.yml für das Deployment vorhanden
+- [ ] ⬜ Aufgabe 2: Deployment-Dokumentation vorhanden (DEPLOYMENT.md)
+- [ ] ⬜ Aufgabe 2: Pipeline-Architektur und Bedienung dokumentiert
+- [ ] ⬜ Aufgabe 2: Dokumentation hat ausreichend Inhalt (mind. 100 Wörter)
 
 Zusaetzlich manuell abgenommen (nicht automatisch geprueft):
 
