@@ -185,68 +185,68 @@ PY
 echo "🔍 Prüfe Abnahmekriterien für Tag 16 Projekt — DORA-Metriken für TechStyle"
 echo ""
 
-echo "── Auftrag 1: Messbar machen ──"
+echo "── Schritt 1: Messbar machen ──"
 
 check "a1-environment" \
-  "Auftrag 1: Deploy-Job meldet die Umgebung production" \
+  "Schritt 1: Deploy-Job meldet die Umgebung production" \
   "environment_ok"
 
 check "a1-incident" \
-  "Auftrag 1: Issue-Vorlage für Vorfälle mit Label incident" \
+  "Schritt 1: Issue-Vorlage für Vorfälle mit Label incident" \
   "incident_template_ok"
 
 check "a1-definitions" \
-  "Auftrag 1: DORA.md definiert Deployment, fehlgeschlagenes Deployment und Beginn der Lead Time" \
+  "Schritt 1: DORA.md definiert Deployment, fehlgeschlagenes Deployment und Beginn der Lead Time" \
   "doc_ok a1-definitions"
 
 echo ""
-echo "── Auftrag 2: Messpipeline ──"
+echo "── Schritt 2: Messpipeline ──"
 
 check "a2-core" \
-  "Auftrag 2: scripts/dora.py berechnet alle fünf Metriken korrekt" \
+  "Schritt 2: scripts/dora.py berechnet alle fünf Metriken korrekt" \
   "core_ok"
 
 check "a2-collect" \
-  "Auftrag 2: scripts/dora_collect.py liest Workflow-Läufe und Vorfälle über die GitHub-API" \
+  "Schritt 2: scripts/dora_collect.py liest Workflow-Läufe und Vorfälle über die GitHub-API" \
   "[ -f $COLLECT ] && grep -qE 'actions/(workflows|runs)' $COLLECT && grep -qE 'issues' $COLLECT && grep -qE 'incident' $COLLECT"
 
 check "a2-trigger" \
-  "Auftrag 2: dora.yml läuft wöchentlich und auf Knopfdruck" \
+  "Schritt 2: dora.yml läuft wöchentlich und auf Knopfdruck" \
   "[ -f $WF ] && grep -qE '^[[:space:]]+schedule:' $WF && grep -qE 'cron:' $WF && grep -qE '^[[:space:]]+workflow_dispatch:' $WF"
 
 check "a2-permissions" \
-  "Auftrag 2: dora.yml hat nur Leserechte" \
+  "Schritt 2: dora.yml hat nur Leserechte" \
   "[ -f $WF ] && grep -qE '^[[:space:]]*permissions:' $WF && grep -qE 'actions:[[:space:]]*read' $WF && ! grep -qiE 'write' $WF"
 
 check "a2-pipeline" \
-  "Auftrag 2: dora.yml ruft dora_collect.py und dora.py auf" \
+  "Schritt 2: dora.yml ruft dora_collect.py und dora.py auf" \
   "[ -f $WF ] && grep -qE 'dora_collect\.py' $WF && grep -qE 'scripts/dora\.py' $WF"
 
 check "a2-summary" \
-  "Auftrag 2: dora.yml schreibt den Bericht in die Zusammenfassung des Laufs" \
+  "Schritt 2: dora.yml schreibt den Bericht in die Zusammenfassung des Laufs" \
   "[ -f $WF ] && grep -qE 'GITHUB_STEP_SUMMARY' $WF"
 
 echo ""
-echo "── Auftrag 4: Auswerten ──"
+echo "── Schritt 4: Auswerten ──"
 
 check "a4-values" \
-  "Auftrag 4: DORA.md enthält Messwerte für alle fünf Metriken" \
+  "Schritt 4: DORA.md enthält Messwerte für alle fünf Metriken" \
   "doc_ok a4-values"
 
 check "a4-levels" \
-  "Auftrag 4: DORA.md ordnet die Werte nach Stufen ein" \
+  "Schritt 4: DORA.md ordnet die Werte nach Stufen ein" \
   "doc_ok a4-levels"
 
 check "a4-run" \
-  "Auftrag 4: DORA.md verlinkt einen Lauf von «DORA-Metriken»" \
+  "Schritt 4: DORA.md verlinkt einen Lauf von «DORA-Metriken»" \
   "doc_ok a4-run"
 
 check "a4-limits" \
-  "Auftrag 4: DORA.md beschreibt die Grenzen der Daten" \
+  "Schritt 4: DORA.md beschreibt die Grenzen der Daten" \
   "doc_ok a4-limits"
 
 check "a4-action" \
-  "Auftrag 4: DORA.md leitet eine Massnahme für die Retro an Tag 17 ab" \
+  "Schritt 4: DORA.md leitet eine Massnahme für die Retro an Tag 17 ab" \
   "doc_ok a4-action"
 
 summary 16

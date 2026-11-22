@@ -11,7 +11,8 @@ ausserhalb der Kommentare. Vorlage und Anleitung: Tagesplanung Tag 16, Projekt.
 
 <!--
 Was zählt bei uns als Deployment? Welcher Workflow (DORA_WORKFLOW), welcher
-Branch, welche Umgebung? Nutzt eure Entscheidungen aus den Streitfällen (P1).
+Branch, welche Umgebung? Nutzt eure Entscheidungen zu den Streitfällen (P1)
+auf dem Nimbus-Board.
 -->
 
 ### Fehlgeschlagenes Deployment
