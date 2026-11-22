@@ -15,7 +15,7 @@ wie lange eine Änderung bis in Produktion braucht oder wie oft dabei etwas
 kaputtgeht.
 
 Euer Team macht die Lieferung heute messbar: Ihr legt fest, was gezählt wird,
-baut eine Messpipeline auf eurem Rechenkern aus der Praxis, erzeugt eine kleine
+baut eine Messpipeline um das Werkzeug `dora.py` aus der Praxis, erzeugt eine kleine
 Lieferhistorie und leitet aus den Zahlen eine Massnahme für die Retro an Tag 17
 ab. Die Zahlen nehmt ihr in die Abschlusspräsentation an Tag 22 mit.
 
@@ -41,7 +41,7 @@ ab. Die Zahlen nehmt ihr in die Abschlusspräsentation an Tag 22 mit.
 
 ## Aufgaben
 
-**Zeit:** 70 Min, timeboxed bis 11:25 | **Format:** Gruppen à 3–4
+**Zeit:** 70 Min, timeboxed | **Format:** Gruppen à 3–4
 
 Die ersten 10 Minuten gehören dem Einrichten: Auftrag annehmen, Repository im
 Codespace öffnen, Rollen für Schritt 2 verteilen. Danach folgen vier Schritte.
@@ -61,7 +61,7 @@ der Tagesplanung von Tag 16, Abschnitt **Projekt**.
    `.github/ISSUE_TEMPLATE/incident.yml` mit Label `incident` anlegen und das
    Label im Repository erstellen. In `DORA.md` die drei Definitionen
    schreiben, gestützt auf eure Streitfälle (P1) auf dem Nimbus-Board.
-2. **Schritt 2 – Messpipeline:** Euren Rechenkern aus der Praxis nach
+2. **Schritt 2 – Messpipeline:** `dora.py` unverändert aus der Praxis nach
    `scripts/dora.py` kopieren, `scripts/dora_collect.py` aus der Vorlage
    übernehmen und `.github/workflows/dora.yml` anlegen: wöchentlich und auf
    Knopfdruck, nur Leserechte, Bericht in die Zusammenfassung des Laufs.
@@ -76,7 +76,7 @@ der Tagesplanung von Tag 16, Abschnitt **Projekt**.
    starten, Werte und Link zum Lauf in `DORA.md` eintragen, die Grenzen der
    Daten beschreiben und eine Massnahme für die Retro an Tag 17 ableiten.
 
-> 🖼️ **Gallery Walk um 11:25:** Jede Gruppe zeigt ihre `DORA.md` auf einem
+> 🖼️ **Gallery Walk direkt nach dem Projekt:** Jede Gruppe zeigt ihre `DORA.md` auf einem
 > Bildschirm, die anderen Gruppen notieren Fragen zu Zahlen und Massnahme.
 
 > ℹ️ **Tag 14 - Deployment auf AWS** und **Security** laufen bei jedem Push
